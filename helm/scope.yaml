@@ -1,0 +1,13 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: weave-scope
+  namespace: scope
+spec:
+  releaseName: weave-scope
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: weave-scope
+    version: 1.1.9
+  values:
+    image.pullPolicy: Always
